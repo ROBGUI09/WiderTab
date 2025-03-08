@@ -12,3 +12,8 @@ jobs:
           distribution: adopt
       - name: Build
         run: chmod +x ./gradlew
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: build-artifacts
+          path: build/libs
